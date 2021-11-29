@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Oxygen:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor0: #B8C0C3; 
+  --cor1: #D3D8DB; 
+  --cor2: #194852; 
+  --cor3: #54808D; 
+  --cor4: #0D0D0D;
+
+  --fonte-texto: 'Oxygen', sans-serif;
+  --fonte-titulo: 'Montagu Slab', serif;
+  --fonte-nav: Arial, Verdana, Comic-sans-serif;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  height: 99vh;
+  width: 100%;
+  background: var(--cor2);
+}
+
+h2, h3 {
+  color: var(--cor4)
+}
+
+.botao {
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: var(--cor0);
+  font-family: .9em;
+  border-radius: 3px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor1);
+  text-decoration: none;
+  
+  padding: 4px 8px;
+
+  align-items: center;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.200);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: var(--cor4);
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/imagens/LOGOIVT.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin: 2px;
+  padding: 20px;
+}
+
+header > h1 {
+  color: white;
+  font: 24px var(--fonte-titulo);
+  margin: 20px 10px;
+}
+
+header > p {
+  color: white;
+
+  display: contents;
+  font: 16px var(--fonte-texto);
+
+  width: 20px;
+  height: 15px;
+
+  margin-bottom: 2em;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px 20px 20px;
+  background-color: var(--cor3);
+  color: #fff;
+}
+
+#sobre h2 {
+  color: var(--cor4);
+  margin-bottom: 12px;
+}
+
+#sobre p {
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+}
+
+#sobre .botao {
+  background-color: var(--cor0);
+  color: white;
+}
+
+#serviços {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+#serviços div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#serviços h2 {
+  color: var(--cor4);
+  margin-bottom: 12px;
+}
+
+#serviços img {
+  border-radius: 55%;
+  margin-bottom: 20px;
+  width: 100px;
+}
