@@ -193,7 +193,7 @@ footer {
   color: white;
 }
 
-footer a {
+footer > a {
   text-decoration: none;
   background-color: var(--cor0);
   color: white;
@@ -201,7 +201,29 @@ footer a {
   padding: 2px;
 }
 
-footer p {
-  margin: 2px;
-  padding: 2px;
+footer >  p {
+  margin: 8px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 768px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav ul {
+    flex-direction: row;
+    width: 70%;
+  }
+  header {
+    height: 600px;
+    height: 60vh;
+    justify-content: center;
+  }
+  #sobre {
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+  }
 }
