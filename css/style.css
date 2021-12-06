@@ -54,25 +54,26 @@ nav {
 
 nav ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   list-style: none;
-  padding: 0;
-  width: 100%;
+  padding: 4px;
+  width: 80%;
 }
 
 nav ul li {
   text-align: center;
-  width: 100%;
+  width: 70%;
 }
 
 nav ul li a {
-  display: inline-block;
-  padding: 10px 0;
-  width: 100%;
+  width: 80%;
   text-decoration: none;
-  color: var(--cor4);
+  color: var(--cor3);
+}
 
+nav ul li a:hover {
+  color: var(--cor4);
 }
 
 header {
@@ -133,35 +134,46 @@ header > p {
 #sobre .botao {
   background-color: var(--cor0);
   color: white;
+  margin-bottom: 20px;
 }
 
 #servicos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  justify-content: center;
+  padding: 10px;
 }
 
 #servicos h2 {
   color: var(--cor4);
+  margin-top: 8px;
   margin-bottom: 12px;
 }
 
 #servicos div {
-  display: inline-block;
+  display: flex;
+  flex-direction: initial;
   align-items: center;
   text-align: center;
   margin-top: 15px;
 }
 
 #servicos img {
-  display: inline-block;
-  border-radius: 55%;
-  margin: 5px 5px;
-  width: 100px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 45%;
+  margin: 6px;
+  width: 90px;
+  height: 90px;
+}
+
+#servicos p {
+  color: #ffffff;
 }
 
 #parceiros {
+  background-color: var(--cor3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,6 +183,16 @@ header > p {
 
 #parceiros h2 {
   color: black;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+#parceiros div {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
 }
 
 #contato {
@@ -206,21 +228,24 @@ footer >  p {
   padding: 4px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 378px) {
 
   nav {
     flex-direction: row;
     justify-content: space-around;
   }
+
   nav ul {
-    flex-direction: row;
-    width: 70%;
+    display: inline-block;
+    width: 40vw;
   }
+
   header {
     height: 600px;
     height: 60vh;
     justify-content: center;
   }
+
   #sobre {
     height: 250px;
     height: 30vh;
