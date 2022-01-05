@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -21,21 +22,28 @@
 
 body {
   font-family: var(--fonte-texto);
-  height: 99vh;
-  width: 100%;
-  background: var(--cor2);
+  height: 100vh;
+  max-width: 100vw;
+  background: var(--cor0);
+  overflow-x: hidden;
 }
 
 h2, h3 {
   color: var(--cor4)
 }
 
+h3 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 12px;
+}
+
 .botao {
+  background-color: var(--cor1);
   color: white;
   text-decoration: none;
   margin-top: 20px;
   padding: 10px 30px;
-  background-color: var(--cor0);
   font-family: .9em;
   border-radius: 3px;
 }
@@ -43,13 +51,12 @@ h2, h3 {
 nav {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   background-color: var(--cor1);
   text-decoration: none;
-  
   padding: 4px 8px;
-
   align-items: center;
-  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.200);
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.400);
 }
 
 nav ul {
@@ -58,16 +65,15 @@ nav ul {
   align-items: center;
   list-style: none;
   padding: 4px;
-  width: 80%;
+  width: 70vw;
 }
 
 nav ul li {
   text-align: center;
-  width: 70%;
+  width: 70vw;
 }
 
 nav ul li a {
-  width: 80%;
   text-decoration: none;
   color: var(--cor3);
 }
@@ -83,32 +89,35 @@ header {
   background-image: url('/imagens/LOGOIVT.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
+  background-attachment: fixed;
   text-align: center;
-  margin: 2px;
+  margin: 12px;
   padding: 20px;
 }
 
 header > h1 {
   color: white;
   font: 24px var(--fonte-titulo);
-  margin: 20px 10px;
+  margin: 12px;
 }
 
-header > p {
+header p {
   color: white;
-
   display: contents;
   font: 16px var(--fonte-texto);
+  margin: 15px 0px;
+  text-align: justify;
+  text-indent: 30px;
+  font-size: 1em;
+  line-height: 2em;
+}
 
-  width: 20px;
-  height: 15px;
-
-  margin-bottom: 2em;
-
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+main {
+  margin: auto;
+  padding: auto;
+  min-width: 400px;
+  max-width: 1000px;
 }
 
 #sobre {
@@ -123,12 +132,16 @@ header > p {
 
 #sobre h2 {
   color: var(--cor4);
-  margin-bottom: 12px;
+  margin: 8px 12px 10px;
 }
 
 #sobre p {
-  margin-bottom: 2.5em;
-  max-width: 1000px;
+  margin: 2.5em;
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 500px;
 }
 
 #sobre .botao {
@@ -138,38 +151,56 @@ header > p {
 }
 
 #servicos {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  background-color: var(--cor4);
+  color: #ffffff;
 }
 
 #servicos h2 {
-  color: var(--cor4);
+  color: white;
+  text-align: center;
   margin-top: 8px;
   margin-bottom: 12px;
 }
 
 #servicos div {
   display: flex;
-  flex-direction: initial;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
-#servicos img {
+div > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: baseline;
+  margin: 24px 36px;
+}
+
+img.foto {
   display: flex;
   flex-direction: column;
   border-radius: 45%;
-  margin: 6px;
+  margin: 10px 8px;
+  padding: 2px;
   width: 90px;
   height: 90px;
 }
 
 #servicos p {
-  color: #ffffff;
+  color: #6094E2;
+  font-size: 18px;
+  margin: 4px;
+  padding: 4px;
+  align-items: center;
+  text-align: center;
+  place-items: ;
+  text-indent: .4em;
 }
 
 #parceiros {
@@ -178,57 +209,86 @@ header > p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 30px 15px;
 }
 
 #parceiros h2 {
   color: black;
   margin-top: 8px;
   margin-bottom: 14px;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 12px;
+  text-align: justify;
+  text-indent: 1.5em;
+  text-indent: 10px;
+  font-size: .9em;
+  line-height: 1.5em;
 }
 
 #parceiros div {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  margin-top: 15px;
-}
-
-#contato {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  text-align: center;
+  text-indent: .5em;
+  margin-top: 8px;
+}
+
+
+#contato  {
+  background-color: var(--cor4);
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 55px;
 }
 
 #contato h2 {
-  color: black;
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+#contato  a{
+  text-decoration: none;
 }
 
 footer {
+  background-color: var(--cor1);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  margin: 0px;
-  padding: 10px;
-  background-color: var(--cor4);
-  color: white;
+  font-size: 0.8em;
+  margin: auto;
+  padding: 25px;
 }
 
-footer > a {
+.portfolio {
+  color: black;
+  position: absolute;
+  right: 870px;
+  padding: 6px;
   text-decoration: none;
-  background-color: var(--cor0);
-  color: white;
+}
+
+.voltar {
+  background-color: var(--cor4);
+  color: whitesmoke;
+  position: absolute;
+  bottom: auto;
+  right: 8px;
   width: 50px;
-  padding: 2px;
-}
-
-footer >  p {
-  margin: 8px;
+  height: 25px;
   padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 378px) {
+@media screen and (width: 325px) {
 
   nav {
     flex-direction: row;
@@ -237,11 +297,11 @@ footer >  p {
 
   nav ul {
     display: inline-block;
-    width: 40vw;
+    width: 80vw;
   }
 
   header {
-    height: 600px;
+    width: 80v;
     height: 60vh;
     justify-content: center;
   }

@@ -17,19 +17,22 @@
       do seu home office e dia a dia com serviço especializado</p>
       <a href="#parceiros" class="botao">Veja Mais</a>
   </header>
-  <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#parceiros">Parceiros</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-  </nav>
+  <section>
+    <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#parceiros">Parceiros</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+  </section>
 
   <main>
   <section id="sobre">
     <article>
       <h2>Sobre</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex dolore distinctio quidem omnis dolores, voluptates voluptate temporibus magnam quo quod alias impedit voluptatem? Vero nisi eveniet laboriosam magni molestiae!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex dolore distinctio quidem omnis dolores, voluptates voluptate temporibus magnam quo quod alias impedit voluptatem? Vero nisi eveniet laboriosam magni molestiae!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex dolore distinctio quidem omnis dolores, voluptates voluptate temporibus magnam quo quod alias impedit voluptatem? Vero nisi eveniet laboriosam magni molestiae!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex dolore distinctio quidem omnis dolores, voluptates voluptate temporibus magnam quo quod alias impedit voluptatem? Vero nisi eveniet laboriosam magni molestiae!</p>
@@ -39,24 +42,44 @@
   
   <section id="servicos">
     <h2>Serviços</h2>
-      <div class="img">
-        <img src="./imagens/consultoria.PNG" alt="Consultoria">
-        <p>Consultoria</p>
-        <img src="./imagens/infra.PNG" alt="Infraestrutura">
-        <p>Infraestrutura</p>
-        <img src="./imagens/help_desk.PNG" alt="Help Desk">
-        <p>Help Desk</p>
-        <img src="./imagens/pcgamer.PNG" alt="PC Gamer">
-        <p>PC Gamer</p>
-        <img src="./imagens/cftv.PNG" alt="CFTV">
-        <p>CFTV</p>
+    <div>
+      <div>
+      <p>Consultoria</p>
+      <figure>
+        <img src="./imagens/consultoria.PNG" alt="Consultoria" class="foto">
+      </figure>
       </div>
+      <div>
+        <p>Infraestrutura</p>
+        <figure>
+          <img src="./imagens/infra.PNG" alt="Infraestrutura" class="foto">
+        </figure>
+      </div>
+      <div>
+        <p>Help Desk</p>
+        <figure>
+          <img src="./imagens/help_desk.PNG" alt="Help Desk" class="foto">
+        </figure>
+      </div>
+      <div>
+        <p>PC Gamer</p>
+        <figure>
+          <img src="./imagens/pcgamer.PNG" alt="PC Gamer" class="foto">
+        </figure>
+      </div>
+      <div>
+        <p>CFTV</p>
+        <figure>
+          <img src="./imagens/cftv.PNG" alt="CFTV" class="foto">
+        </figure>
+      </div>
+    </div>
 
   </section>
 
   <section id="parceiros">
     <h2>Nossos Parceiros</h2>
-      <div>
+      <div class="container">
        <div>
          <h3>Juquinha</h3>
          <p>Divulgue os seus produtos no mercado livre através do nosso sistema com poucos cliques</p>
@@ -103,8 +126,10 @@
   
   <section>
     <footer>
-      <a href="#topo">Voltar</a>
-      <p>Desenvolvido por ViUsTecnologia</p>
+      <a href="#topo" class="voltar">Topo</a>
+      <a href="https://viustecnologia.vercel.app/" target="_blank" class="portfolio">
+        <p>&copy By ViUsTec</p>
+      </a>
     </footer>
   </section>
 
