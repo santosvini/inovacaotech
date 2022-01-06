@@ -32,12 +32,6 @@ h2, h3 {
   color: var(--cor4)
 }
 
-h3 {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  margin: 12px;
-}
-
 .botao {
   background-color: var(--cor1);
   color: white;
@@ -87,10 +81,9 @@ header {
   flex-direction: column;
   align-items: center;
   background-image: url('/imagens/LOGOIVT.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: left top;
   text-align: center;
   margin: 12px;
   padding: 20px;
@@ -199,7 +192,6 @@ img.foto {
   padding: 4px;
   align-items: center;
   text-align: center;
-  place-items: ;
   text-indent: .4em;
 }
 
@@ -239,22 +231,33 @@ img.foto {
   margin-top: 8px;
 }
 
-
 #contato  {
   background-color: var(--cor4);
   align-items: center;
   text-align: center;
-  padding: 55px;
+  padding: 50px;
 }
 
 #contato h2 {
   color: white;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin: 12px 10px;
 }
 
-#contato  a{
+#contato a{
+  color: white;
   text-decoration: none;
+}
+
+#contato p {
+  color: white;
+}
+
+p > a > img {
+  display: flex;
+  flex-direction: column;
+  margin: auto 12px auto 12px;
+  width: 40px;
+  height: 40px;
 }
 
 footer {
@@ -264,12 +267,11 @@ footer {
   text-align: center;
   font-size: 0.8em;
   margin: auto;
-  padding: 25px;
+  padding: 10px;
 }
 
 .portfolio {
   color: black;
-  position: absolute;
   right: 870px;
   padding: 6px;
   text-decoration: none;
