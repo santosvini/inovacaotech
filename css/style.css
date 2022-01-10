@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap');
+
 
 * {
   margin: 0;
@@ -9,7 +12,7 @@
 }
 
 :root {
-  --cor0: #B8C0C3; 
+  --cor0: #868D8F; 
   --cor1: #D3D8DB; 
   --cor2: #194852; 
   --cor3: #54808D; 
@@ -18,13 +21,14 @@
   --black: #000000;
 
   --fonte-texto: 'Oxygen', sans-serif;
-  --fonte-titulo: 'Montagu Slab', serif;
+  --fonte-titulo: 'Inter', sans-serif;;
   --fonte-nav: Arial, Verdana, Comic-sans-serif;
 }
 
 .light-theme {
   --bg: var(--cor0);
   --fontColor: var(--cor4);
+  --p: var(--black);
   --btnBg: var(--cor4);
   --btnFontColor: var(--cor0);
 }
@@ -32,18 +36,28 @@
 .dark-theme {
   --bg: var(--cor4);
   --fontColor: var(--cor1);
+  --p: var(--white);
   --btnBg: var(--cor1);
   --btnFontColor: var(--cor4);
 }
 
+.theme button {
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
 .btn {
   position: absolute;
-  top: 30px;
-  right: 180px;
+  top: 20px;
+  left: 50px;
+  margin: 0px;
+  padding: 0px;
   height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  border: none;
+  width: 75px;
+  border-radius: 20px;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
 }
@@ -56,11 +70,7 @@
 body {
   font-family: var(--fonte-texto);
   background-color: var(--bg);
-  
-}
-
-h2, h3 {
-  color: var(--cor4)
+  color: var(--fontColor);
 }
 
 .botao {
@@ -68,20 +78,23 @@ h2, h3 {
   color: var(--cor4);
   text-decoration: none;
   margin-top: 20px;
-  padding: 10px 30px;
+  margin-bottom: -18px;
+  padding: 5px 10px;
   font-family: .8em;
+  font-weight: bolder;
   border-radius: 8px;
 }
 
 nav {
   background-color: var(--cor1);
   text-decoration: none;
-  padding: 10px;
+  padding: 14px;
   box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.400);
 }
 
 nav > a {
   color: var(--cor3);
+  font-weight: bolder;
   margin: auto;
   align-items: center;
   text-align: center;
@@ -105,14 +118,14 @@ header {
   background-image: url('/imagens/LOGOIVT.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: right top;
   text-align: center;
-  margin: 12px;
+  margin: 10px 4px;
   padding: 20px;
 }
 
 header > h1 {
-  color: white;
+  color: var(--p);
   font: 1.3em var(--fonte-titulo);
   margin-top: 20px;
   margin-bottom: 20px;
@@ -121,13 +134,12 @@ header > h1 {
 .describe {
   line-height: 1em;
   font-size: .9em;
-  text-indent: 15px;
   text-align: justify;
 }
 
 header > div > p {
   color: var(--white);
-  font: 16px var(--fonte-texto);
+  font: bolder 16px var(--fonte-texto);
   display: contents;
   max-width: 600px;
   margin: 15px;
@@ -155,18 +167,15 @@ main {
 }
 
 #sobre h2 {
-  color: var(--cor1);
+  color: var(--white);
   margin: 8px 12px 10px;
 }
 
-#sobre h3 {
-  color: var(--white);
-  margin: 12px 10px;
+.grid h3 {
+  color: var(--p);
+  margin: 18px 10px;
 }
 
-/* .grid {
-  
-} */
 
 #sobre p {
   margin: 1.5em;
@@ -248,7 +257,7 @@ img.foto {
 }
 
 #parceiros h3 {
-  color: var(--white);
+  color: var(--p);
   margin: 12px 10px;
 }
 
@@ -277,13 +286,13 @@ img.foto {
 }
 
 #contato h2 {
-  color: white;
+  color: var(--white);
   margin: 12px 10px;
   padding-bottom: 4px;
 }
 
 #contato p {
-  color: white;
+  color: var(--white);
   padding-top: 2px;
 }
 
@@ -322,33 +331,33 @@ img.foto {
   height: 88px;;
 }
 
-footer {
+section > footer {
   background-color: var(--cor1);
-  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
   text-align: center;
-  font-size: 0.9em;
   margin: auto;
-  padding: 5px;
+  padding: 20px;
+  height: 8vh;
+  width: 70,3vw;
 }
 
 .portfolio {
-  color: black;
-  right: 870px;
-  padding: 6px;
+  color: var(--black);
+  font: bolder 12px Verdana, Geneva, Tahoma, sans-serif;
+  margin: auto;
+  text-align: center;
   text-decoration: none;
 }
 
 .voltar {
+  color: var(--white);
   background-color: var(--cor4);
-  color: whitesmoke;
-  position: absolute;
-  margin-bottom: 8px;
-  right: 180px;
-  width: 40px;
-  height: 25px;
-  margin: 6px;
+  font: bolder 12px Verdana, Geneva, Tahoma, sans-serif;
+  width: 50px;
+  height: 28px;
+  margin: 8px;
   padding: 4px;
-  border-radius: 3px;
+  text-align: center;
   text-decoration: none;
 }
