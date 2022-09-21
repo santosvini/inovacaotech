@@ -15,7 +15,19 @@ function change() {
 }
 
 function toTop() {
-  
+  const topo = document.querySelector('.scrollTop')
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset < 400) {
+      topo.classList.add('ativo')
+    } else {
+      topo.classList.remove('ativo')
+    }
+  })
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0
+    })
 }
 
 function scrollSuave() {
@@ -30,7 +42,6 @@ function scrollSuave() {
       block: 'start',
     })
   }
-
   linksInternos.forEach((link) => {
     link.addEventListener('click', scrollSection)
   })

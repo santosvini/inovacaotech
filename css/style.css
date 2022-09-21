@@ -23,6 +23,10 @@
   --fonte-nav: Arial, Verdana, Comic-sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--fonte-texto);
   background-color: var(--bg);
@@ -99,6 +103,7 @@ ul {
   margin-bottom: 24px;
   background: #fb5;
   border-radius: 4px;
+  transition: all 1s ease;
 }
 
 nav {
@@ -117,6 +122,7 @@ nav > a {
   text-transform: uppercase;
   margin: 14px;
   padding: 12px;
+  transition: all .8s;
 }
 
 nav > a:hover {
@@ -235,12 +241,12 @@ header > div > p {
 
 ul.lista-servicos {
   display: flex;
-  justify-content: space-between;
+ 
   margin: 12px;
 }
 
 img.foto {
-  border-radius: 48%;
+  border-radius: 35%;
   margin: 18px;
   padding: 8px;
   width: 98px;
@@ -332,6 +338,15 @@ img.foto {
   text-decoration: none;
 }
 
+.dados img {
+  margin-top: 8px;
+  margin-left: -35px;
+  justify-content: space-between;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
 .dados p {
   color: var(--p);
   font: bolder 1.2em Arial, Helvetica, sans-serif;
@@ -339,14 +354,14 @@ img.foto {
   text-transform: uppercase;
 }
 
-.dados p::before {
+/* .dados p::before {
   content: "";
   display: inline-block;
   width: 14px;
   height: 10px;
   margin-right: 8px;
   background-color: #D35400;
-}
+} */
 
 .copy {
   background-color: #fb5;
@@ -364,6 +379,15 @@ img.foto {
   padding: 8px;
 }
 
+button > img {
+  background-color: transparent;
+  margin: 6px;
+  width: 60%;
+  height: 65%;
+  border-radius: 4px;
+  align-items: center;
+}
+
 @media (max-width: 500px) {
   body {
     grid-template-columns: 1fr;
@@ -372,20 +396,18 @@ img.foto {
     text-align: start;
     background-position: top;
   }
-  nav{
+  /* nav{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: start;
-  }
+  } */
   .menu, .grid-section, .copy {
     grid-column: 1;
-    max-width: 550px;
+    max-width: 520px;
   }
   .menu {
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: start; */
+    justify-content: space-between;
     margin-bottom: 14px;
 }
   .servicos {
@@ -414,4 +436,26 @@ img.foto {
     width: 100%;
     margin: 4px;
   }
+}
+
+.scrollTop {
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 8px;
+  align-items: center;
+  position: fixed;
+  bottom: 12px;
+  right: 22px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s ease;
+}
+
+.scrollTop.ativo {
+  pointer-events: visibleFill;
+  opacity: 0;
+}
+
+.scrollTop:hover {
+  background-color: var(--white);
 }
