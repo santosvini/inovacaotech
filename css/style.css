@@ -388,7 +388,7 @@ button > img {
   align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 480px) and (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -396,41 +396,47 @@ button > img {
     text-align: start;
     background-position: top;
   }
-  /* nav{
+  nav > a {
+    margin: 2px;
+    padding: 4px;
+    font-size: .6em;
     width: 100%;
     justify-content: start;
-  } */
+  }
   .menu, .grid-section, .copy {
     grid-column: 1;
-    max-width: 520px;
+    /* max-width: 520px; */
   }
   .menu {
+    background-color: var(--cor1);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 14px;
+    flex-wrap: nowrap;
+    margin-top: 4px;
+    border-radius: 8px;
 }
   .servicos {
+    display: grid;
     background-color: var(--cor1);
     text-align: center;
     padding-bottom: 180px;
     height: 380px;
+    border-radius: 8px;
   }
   .servicos h2 {
     padding-bottom: 24px;
   }
-  ul.lista-servicos {
-    display: flex;
+  .lista-servicos {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 120px;
-    padding-bottom: 48px;
   }
   img.foto {
-    width: 50px;
+    width: 45px;
   }
   .contato h2{
-    font: bolder 18px Verdana;
+    display: none;
+  }
+  .dados{
+    margin: 22px;
   }
   .copy {
     width: 100%;
