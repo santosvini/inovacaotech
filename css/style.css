@@ -388,7 +388,7 @@ button > img {
   align-items: center;
 }
 
-@media (min-width: 400px) and (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 720px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -415,23 +415,25 @@ button > img {
     border-radius: 8px;
 }
   .servicos {
-    display: grid;
+    display: flex;
     background-color: var(--cor1);
     text-align: center;
-    padding-bottom: 180px;
-    height: 380px;
+    margin: 14px;
+    padding-bottom: 18px;
+    height: 500px;
     border-radius: 8px;
   }
   .servicos h2 {
-    padding-bottom: 24px;
+    height: 24vh;
+    margin: 12px 18px;
   }
   ul.lista-servicos {
     flex-wrap: wrap;
-    margin: -8px;
+    margin: -30px;
     justify-content: space-evenly;
   }
   img.foto {
-    width: 45px;
+    width: 50px;
   }
   .contato h2{
     display: none;
