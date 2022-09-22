@@ -388,7 +388,7 @@ button > img {
   align-items: center;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -425,8 +425,9 @@ button > img {
   .servicos h2 {
     padding-bottom: 24px;
   }
-  .lista-servicos {
+  ul.lista-servicos {
     flex-wrap: wrap;
+    margin: -8px;
     justify-content: space-evenly;
   }
   img.foto {
