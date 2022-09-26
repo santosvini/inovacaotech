@@ -34,10 +34,9 @@ body {
 }
 
 main {
-  max-width: 1000px;
-  margin: auto;
-  margin-bottom: 10px;
-  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px;
 }
 
 ul {
@@ -92,27 +91,28 @@ ul {
   color: var(--white);
   background-color: var(--cor4);
   text-decoration: none;
-  margin-top: 28px;
-  padding: 14px;
+  margin-top: 24px;
+  padding: 10px;
   font-family: var(--fonte-texto);
   font-weight: bolder;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 .menu {
-  margin-bottom: 24px;
-  background: #fb5;
-  border-radius: 4px;
+  display: flex;
+  background-color: #c6c6c6;
+  margin-bottom: 18px;
+  border-radius: 8px;
   transition: all 1s ease;
 }
 
 nav {
-  margin: 12px;
-  padding: 12px;
+  max-width: 100%;
+  margin: 14px;
   text-align: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 2px 4px 6px var(--a);
+  box-shadow: 2px 2px 4px var(--a);
 }
 
 nav > a {
@@ -122,38 +122,32 @@ nav > a {
   text-transform: uppercase;
   margin: 14px;
   padding: 12px;
-  transition: all .8s;
-}
-
-nav > a:hover {
-  color: var(--a);
+  transition: all .4s;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  /* min-height: px; */
   align-items: center;
   background-image: url('/imagens/LOGOIVT.png');
   background-size: 12%;
   background-repeat: no-repeat;
-  background-position: left top;
-  text-align: center;
-  margin: 14px 8px;
-  padding: 20px;
+  background-position: center top;
+  margin: 12px 24px;
+  padding: 18px;
 }
 
 h1 {
   color: var(--p);
   font: 1.4em var(--fonte-titulo);
   line-height: 2;
-  margin-top: 2.2rem;
-  margin-bottom: 1rem;
+  margin-top: 60px;
+  padding-top: 30px;
   text-transform: uppercase;
 }
 
 .describe {
-  line-height: 1.2em;
+  line-height: 1.8em;
   font-size: .8em;
   text-align: justify;
 }
@@ -174,7 +168,7 @@ header > div > p {
   align-items: center;
   text-align: center;
   margin: 12px;
-  padding: 40px;
+  padding: 36px;
   background-color: var(--cor2);
   color: #fff;
   border-radius: 8px;
@@ -206,18 +200,18 @@ header > div > p {
 }
 
 .sobre p {
-  text-align: initial;
-  font-size: 1.2em;
-  line-height: 1.6em;
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.8em;
   margin: 1.2em;
-  padding-bottom: 1.3em;
+  padding-bottom: 1.2em;
 }
 
 .sobre .botao {
   background-color: var(--cor1);
   color: var(--cor4);
-  margin-top: 28px;
-  padding: 14px;
+  margin-top: 18px;
+  padding: 12px;
 }
 
 .servicos {
@@ -228,35 +222,35 @@ header > div > p {
   text-align: center;
   justify-content: center;
   margin: 12px;
-  padding: 20px;
+  padding: 28px;
   height: 280px;
 }
 
 .servicos h2 {
   color: gray;
-  font: bolder 28px Verdana, Geneva, Tahoma, sans-serif;
-  margin: 8px 12px;
+  font: bolder 28px Verdana;
+  margin: 12px;
   text-transform: uppercase;
 }
 
 ul.lista-servicos {
   display: flex;
- 
+  font-size: medium;
   margin: 12px;
 }
 
 img.foto {
-  border-radius: 35%;
+  border-radius: 38%;
   margin: 18px;
-  padding: 8px;
-  width: 98px;
+  padding: 10px;
+  width: 100px;
 }
 
 .servicos p {
   color: var(--p);
-  font: bolder 14px Serif;
+  font: bolder 12px Serif;
   margin: 6px;
-  padding: 12px;
+  padding: 10px;
   align-items: center;
   text-align: center;
   text-indent: .1em;
@@ -270,7 +264,7 @@ img.foto {
   align-items: center;
   text-align: center;
   margin: 12px;
-  padding: 40px;
+  padding: 28px;
   color: #fff;
   border-radius: 8px;
 }
@@ -285,6 +279,7 @@ img.foto {
 .parceiros h3 {
   font-weight: 900;
   color:#6094E2;
+  text-transform: uppercase;
 }
 
 .parceiros h3::before{
@@ -297,19 +292,17 @@ img.foto {
 }
 
 .parceiros div {
-  /* display: grid;
-  grid-template-columns: max-content; */
   text-align: center;
-  justify-items: start;
-  margin: 14px;
+  justify-content: center;
+  margin: 18px;
 }
 
 .parceiros p{
-  text-align: initial;
-  font-size: 1.2em;
-  line-height: 1.6em;
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.8em;
   margin: 1.2em;
-  padding-bottom: 1.3em;
+  padding-bottom: 1.2em;
 }
 
 .contato {
@@ -349,8 +342,9 @@ img.foto {
 
 .dados p {
   color: var(--p);
-  font: bolder 1.2em Arial, Helvetica, sans-serif;
-  padding: 14px;
+  font: bolder 1.3em Arial;
+  margin: 8px;
+  padding: 12px;
   text-transform: uppercase;
 }
 
@@ -389,61 +383,82 @@ button > img {
 }
 
 @media (min-width: 360px) and (max-width: 720px) {
-  body {
-    grid-template-columns: 1fr;
+  main {
+    max-width: 100%;
+    padding: 0;
   }
   header {
     text-align: start;
-    background-position: top;
+    padding-top: 42px;
+    background-size: 35%;
+    background-position: center top;
   }
   nav > a {
-    margin: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
     padding: 4px;
     font-size: .6em;
-    width: 100%;
     justify-content: start;
+  }
+  h1{
+    padding-top: 60px;
+  }
+  .parceiros p, .sobre p, .describe p, .contato p {
+    font-size: 14px;
+    text-align: left;
   }
   .menu, .grid-section, .copy {
     grid-column: 1;
-    /* max-width: 520px; */
   }
   .menu {
     background-color: var(--cor1);
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
     margin-top: 4px;
     border-radius: 8px;
-}
+  }
   .servicos {
     display: flex;
     background-color: var(--cor1);
     text-align: center;
-    margin: 14px;
-    padding-bottom: 18px;
+    padding: 0;
     height: 500px;
     border-radius: 8px;
   }
   .servicos h2 {
-    height: 24vh;
+    padding-top: 36px;
+    font-size: 18px;
     margin: 12px 18px;
   }
   ul.lista-servicos {
     flex-wrap: wrap;
-    margin: -30px;
-    justify-content: space-evenly;
+    padding: 18px;
+    justify-content: center;
   }
   img.foto {
-    width: 50px;
+    width: 55px;
+    padding: 8px;
   }
-  .contato h2{
-    display: none;
+  .contato {
+    display: grid;
+    grid-column: 1;
+    gap: 40px;
   }
-  .dados{
-    margin: 22px;
+  .contato h2 {
+    display: flex;
+    font-size: 22px;
+  }
+  div > ul.dados{
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
   }
   .copy {
-    width: 100%;
-    margin: 4px;
+    width: 70%;
+    margin: 8px;
+    padding: 4px;
   }
 }
 
