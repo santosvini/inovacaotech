@@ -36,7 +36,7 @@ body {
 main {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px;
+  padding: 24px;
 }
 
 ul {
@@ -61,25 +61,14 @@ ul {
   --btnFontColor: var(--black);
 }
 
-/* button {
-  align-self: flex-start;
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  padding: 10px;
-} */
-
 .btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 0px;
-  height: 35px;
-  width: 55px;
-  border-radius: 20px;
-  color: var(--btnFontColor);
-  background-color: var(--btnBg);
-  text-transform: none
+  display: grid;
+  align-items: right;
+  justify-content: space-between;
+  margin: 8px;
+  padding: 14px;
+  background-color: transparent;
+  border: none;
 }
 
 .btn:focus { 
@@ -98,68 +87,68 @@ ul {
   border-radius: 12px;
 }
 
+.header {
+  background-color: var(--cor1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 .menu {
   display: flex;
-  background-color: #c6c6c6;
-  margin-bottom: 18px;
-  border-radius: 8px;
-  transition: all 1s ease;
-}
-
-nav {
-  max-width: 100%;
-  margin: 14px;
-  text-align: center;
+  align-items: center;
   justify-content: center;
-  text-decoration: none;
-  box-shadow: 2px 2px 4px var(--a);
+  width: 100%;
 }
 
-nav > a {
-  color: var(--p);
+.menu a {
+  display: block;
+  color: var(--cor2);
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
-  margin: 14px;
-  padding: 12px;
   transition: all .4s;
 }
 
-header {
+.menu a:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.header > img {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('/imagens/LOGOIVT.png');
-  background-size: 12%;
-  background-repeat: no-repeat;
-  background-position: center top;
-  margin: 12px 24px;
-  padding: 18px;
+  background: transparent;
+  width: 100px;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   color: var(--p);
-  font: 1.4em var(--fonte-titulo);
+  font: bolder  1.2em var(--fonte-titulo);
   line-height: 2;
-  margin-top: 60px;
-  padding-top: 30px;
+  margin: 30px 12px;
   text-transform: uppercase;
 }
 
 .describe {
-  line-height: 1.8em;
-  font-size: .8em;
+  display: grid;
+  font: bold 1.2em var(--fonte-texto);
+  color: var(--p);
+  margin: 4px;
+  padding: 8px;
   text-align: justify;
 }
 
-header > div > p {
-  color: var(--p);
-  font: bold 32px var(--fonte-texto);
-  font-size: 1.2em;
-  display: contents;
-  max-width: 600px;
-  text-align: justify;
-  line-height: 2.2em;
+.describe p {
+  line-height: 1.8em;
 }
 
 .sobre {
@@ -200,8 +189,8 @@ header > div > p {
 }
 
 .sobre p {
-  text-align: justify;
-  font-size: 1em;
+  text-align: start;
+  font-size: 1.2em;
   line-height: 1.8em;
   margin: 1.2em;
   padding-bottom: 1.2em;
@@ -248,9 +237,9 @@ img.foto {
 
 .servicos p {
   color: var(--p);
-  font: bolder 12px Serif;
-  margin: 6px;
-  padding: 10px;
+  font: bolder 14px Helvetica;
+  margin: 8px;
+  padding: 18px;
   align-items: center;
   text-align: center;
   text-indent: .1em;
@@ -297,9 +286,9 @@ img.foto {
   margin: 18px;
 }
 
-.parceiros p{
-  text-align: justify;
-  font-size: 1em;
+.parceiros p {
+  text-align: start;
+  font-size: 1.2em;
   line-height: 1.8em;
   margin: 1.2em;
   padding-bottom: 1.2em;
@@ -310,7 +299,7 @@ img.foto {
   align-items: center;
   justify-content: space-between;
   margin: 12px;
-  padding: 24px;
+  padding: 36px;
 }
 
 .contato h2 {
@@ -348,28 +337,18 @@ img.foto {
   text-transform: uppercase;
 }
 
-/* .dados p::before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 10px;
-  margin-right: 8px;
-  background-color: #D35400;
-} */
-
 .copy {
   background-color: #fb5;
   font-size: .9em;
-  text-align: left;
-  width: 35%;
-  margin: 12px;
-  padding: 8px;
-  border-radius: 4px;
+  text-align: center;
+  margin: 10px;
+  padding: 4px;
+  border-radius: 8px;
 }
 
 .copy p {
-  color: var(--p);
-  font-family: 'IBM Plex Mono', monospace;
+  color: black;
+  font: bolder 18px 'IBM Plex Mono', monospace;
   padding: 8px;
 }
 
@@ -385,24 +364,31 @@ button > img {
 @media (min-width: 360px) and (max-width: 720px) {
   main {
     max-width: 100%;
-    padding: 0;
+    padding: 20px;
   }
-  header {
-    text-align: start;
-    padding-top: 42px;
-    background-size: 35%;
-    background-position: center top;
+  .header {
+    background-color:var(--cor1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 24px;
   }
   nav > a {
-    display: flex;
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 4px;
-    font-size: .6em;
+    font-size: 14px;
     justify-content: start;
   }
   h1{
-    padding-top: 60px;
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 24px;
+  }
+  .btn {
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 40px;
   }
   .parceiros p, .sobre p, .describe p, .contato p {
     font-size: 14px;
@@ -412,11 +398,10 @@ button > img {
     grid-column: 1;
   }
   .menu {
-    background-color: var(--cor1);
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 14px;
     border-radius: 8px;
   }
   .servicos {
@@ -424,17 +409,16 @@ button > img {
     background-color: var(--cor1);
     text-align: center;
     padding: 0;
-    height: 500px;
+    height: 740px;
     border-radius: 8px;
   }
   .servicos h2 {
     padding-top: 36px;
-    font-size: 18px;
-    margin: 12px 18px;
+    font-size: 22px;
   }
   ul.lista-servicos {
     flex-wrap: wrap;
-    padding: 18px;
+    padding: 16px;
     justify-content: center;
   }
   img.foto {
@@ -444,19 +428,19 @@ button > img {
   .contato {
     display: grid;
     grid-column: 1;
-    gap: 40px;
+    gap: 10px;
   }
   .contato h2 {
     display: flex;
-    font-size: 22px;
+    font-size: 30px;
   }
   div > ul.dados{
     display: flex;
     flex-direction: column;
-    margin: 12px;
+    margin: 36px;
   }
   .copy {
-    width: 70%;
+    /* width: 70%; */
     margin: 8px;
     padding: 4px;
   }
@@ -464,12 +448,13 @@ button > img {
 
 .scrollTop {
   cursor: pointer;
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: 8px;
   align-items: center;
   position: fixed;
-  bottom: 12px;
-  right: 22px;
+  margin: 12px;
+  bottom: 72px;
+  right: 24px;
   width: 40px;
   height: 40px;
   transition: all 0.5s ease;
@@ -478,8 +463,4 @@ button > img {
 .scrollTop.ativo {
   pointer-events: visibleFill;
   opacity: 0;
-}
-
-.scrollTop:hover {
-  background-color: var(--white);
 }
