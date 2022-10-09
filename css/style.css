@@ -53,7 +53,7 @@ ul {
 }
 
 .dark {
-  --bg: var(--cor4);
+  --bg: var(--black);
   --fontColor: var(--cor1);
   --p: var(--white);
   --a: var(--white);
@@ -82,13 +82,12 @@ ul {
   text-decoration: none;
   margin-top: 24px;
   padding: 10px;
-  font-family: var(--fonte-texto);
-  font-weight: bolder;
+  font: bolder 16px var(--fonte-texto);
   border-radius: 12px;
 }
 
 .header {
-  background-color: var(--cor1);
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,11 +109,10 @@ ul {
   color: var(--cor2);
   margin: 10px;
   padding: 10px;
-  font-size: 16px;
-  font-weight: 900;
+  font: bold 16px var(--fonte-nav);
   text-decoration: none;
   text-transform: uppercase;
-  transition: all .4s;
+  transition: all .4s ease;
 }
 
 .menu a:hover {
@@ -133,13 +131,11 @@ h1 {
   justify-content: center;
   color: var(--p);
   font: bolder  1.2em var(--fonte-titulo);
-  line-height: 2;
   margin: 30px 12px;
   text-transform: uppercase;
 }
 
 .describe {
-  display: grid;
   font: bold 1.2em var(--fonte-texto);
   color: var(--p);
   margin: 4px;
@@ -148,7 +144,7 @@ h1 {
 }
 
 .describe p {
-  line-height: 1.8em;
+  line-height: 1.4em;
 }
 
 .sobre {
@@ -158,12 +154,13 @@ h1 {
   text-align: center;
   margin: 12px;
   padding: 36px;
-  background-color: var(--cor2);
+  background-color: var(--cor3);
   color: #fff;
   border-radius: 8px;
 }
 
 .sobre h2 {
+  font: bolder 28px var(--fonte-titulo);
   text-align: center;
   color: var(--white);
   margin: 8px;
@@ -171,8 +168,8 @@ h1 {
 }
 
 .sobre h3 {
-  color: #6094E2;
-  font-size: .9rem;
+  color: #EEE8A9;
+  font: bolder 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin: 36px;
@@ -188,19 +185,45 @@ h1 {
   background-color: #fb5;
 }
 
-.sobre p {
-  text-align: start;
-  font-size: 1.2em;
+.sobre div > p {
+  text-align: center;
+  font: 1.2em var(--fonte-texto);
   line-height: 1.8em;
   margin: 1.2em;
-  padding-bottom: 1.2em;
+  padding-bottom: 1em;
 }
 
 .sobre .botao {
-  background-color: var(--cor1);
-  color: var(--cor4);
+  background-color: var(--btnBg);
+  color: var(--btnFontColor);
   margin-top: 18px;
   padding: 12px;
+}
+
+.treinamentos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 48px;
+  background-color: var(--cor0);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.treinamentos h2 {
+  font: bolder 28px var(--fonte-titulo);
+  text-align: center;
+  color: var(--white);
+  margin: 4px;
+  text-transform: uppercase;
+}
+
+.treinamentos div > p {
+  font: 1em var(--fonte-texto);
+  line-height: 1.8em;
+  margin: 1em;
+  padding: 1em;
 }
 
 .servicos {
@@ -212,12 +235,12 @@ h1 {
   justify-content: center;
   margin: 12px;
   padding: 28px;
-  height: 280px;
+  height: 380px;
 }
 
 .servicos h2 {
   color: gray;
-  font: bolder 28px Verdana;
+  font: bolder 28px var(--fonte-titulo);
   margin: 12px;
   text-transform: uppercase;
 }
@@ -225,7 +248,7 @@ h1 {
 ul.lista-servicos {
   display: flex;
   font-size: medium;
-  margin: 12px;
+  margin: 14px;
 }
 
 img.foto {
@@ -237,7 +260,7 @@ img.foto {
 
 .servicos p {
   color: var(--p);
-  font: bolder 14px Helvetica;
+  font: bolder 16px Helvetica;
   margin: 8px;
   padding: 18px;
   align-items: center;
@@ -247,7 +270,7 @@ img.foto {
 }
 
 .parceiros {
-  background-color: var(--cor2);
+  background-color: var(--cor3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,14 +283,14 @@ img.foto {
 
 .parceiros h2 {
   color: var(--white);
-  font-weight: bold;
+  font: bolder 28px var(--fonte-titulo);
   margin: 8px 12px;
   text-transform: uppercase;
 }
 
 .parceiros h3 {
-  font-weight: 900;
-  color:#6094E2;
+  font: bold 1.2rem;
+  color:#EEE8A9;
   text-transform: uppercase;
 }
 
@@ -281,15 +304,13 @@ img.foto {
 }
 
 .parceiros div {
-  text-align: center;
-  justify-content: center;
   margin: 18px;
 }
 
 .parceiros p {
-  text-align: start;
-  font-size: 1.2em;
-  line-height: 1.8em;
+  text-align: center;
+  font: 1.2em var(--fonte-texto);
+  line-height: 1.4em;
   margin: 1.2em;
   padding-bottom: 1.2em;
 }
@@ -304,7 +325,7 @@ img.foto {
 
 .contato h2 {
   color: gray;
-  font: bolder 32px Verdana, Geneva, Tahoma, sans-serif;
+  font: bolder 32px var(--fonte-titulo);
   text-align: center;
   text-transform: uppercase;
 }
@@ -315,7 +336,7 @@ img.foto {
   margin-right: 4px;
 }
 
-.dados a{
+.dados a {
   font-size: 14px;
   text-decoration: none;
 }
@@ -338,18 +359,21 @@ img.foto {
 }
 
 .copy {
-  background-color: #fb5;
+  background-color: #17202A;
+  width: 180px;
   font-size: .9em;
   text-align: center;
-  margin: 10px;
+  margin: 12px;
   padding: 4px;
   border-radius: 8px;
 }
 
 .copy p {
-  color: black;
-  font: bolder 18px 'IBM Plex Mono', monospace;
+  text-align: left;
+  color: var(--white);
+  font: bolder 12px 'IBM Plex Mono', monospace;
   padding: 8px;
+  margin: 4px;
 }
 
 button > img {
@@ -364,7 +388,7 @@ button > img {
 @media (min-width: 360px) and (max-width: 720px) {
   main {
     max-width: 100%;
-    padding: 20px;
+    /* padding: 40px; */
   }
   .header {
     background-color:var(--cor1);
@@ -390,9 +414,12 @@ button > img {
     top: 30px;
     right: 40px;
   }
-  .parceiros p, .sobre p, .describe p, .contato p {
-    font-size: 14px;
-    text-align: left;
+  .parceiros p, .sobre div > p, .describe p, .contato p, .treinamentos div > p {
+    font-size: 16px;
+    text-align: start;
+  }
+  .parceiros h2, .treinamentos h2, .sobre h2, .servicos h2 {
+    font-size: 24px;
   }
   .menu, .grid-section, .copy {
     grid-column: 1;
@@ -404,17 +431,23 @@ button > img {
     margin-top: 14px;
     border-radius: 8px;
   }
+  .treinamentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .servicos {
     display: flex;
+    flex-direction: column;
     background-color: var(--cor1);
     text-align: center;
-    padding: 0;
-    height: 740px;
+    padding: 8px;
+    height: 900px;
     border-radius: 8px;
   }
   .servicos h2 {
-    padding-top: 36px;
-    font-size: 22px;
+    margin-top: 36px;
+    padding-top: 18px;
   }
   ul.lista-servicos {
     flex-wrap: wrap;
