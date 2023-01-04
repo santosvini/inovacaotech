@@ -87,7 +87,6 @@ ul {
 }
 
 .header {
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,23 +100,27 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 40%;
 }
 
 .menu a {
   display: block;
-  color: var(--cor2);
-  margin: 10px;
-  padding: 10px;
-  font: bold 16px var(--fonte-nav);
+  color: var(--black);
+  margin: 6px;
+  padding: 8px;
+  font: bolder 16px var(--fonte-nav);
   text-decoration: none;
   text-transform: uppercase;
-  transition: all .4s ease;
+  transition: all .1s ease;
 }
 
 .menu a:hover {
-  background-color: whitesmoke;
+  background-color: var(--cor0);
   border-radius: 10px;
+}
+
+#burguer {
+  display: none;
 }
 
 .header > img {
@@ -127,7 +130,7 @@ ul {
 }
 
 h1 {
-  display: flex;
+  text-align: center;
   justify-content: center;
   color: var(--p);
   font: bolder  1.2em var(--fonte-titulo);
@@ -385,24 +388,29 @@ button > img {
   align-items: center;
 }
 
-@media (min-width: 360px) and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   main {
     max-width: 100%;
-    /* padding: 40px; */
+  }
+  #burguer {
+    /* background-color: #868D8F; */
+    color: var(--cor4);
+    display: block;
+    height: 24px;
+    padding: 10px;
+    cursor: pointer;
   }
   .header {
-    background-color:var(--cor1);
-    display: flex;
+    background-color: var(--cor1);
     flex-direction: column;
     text-align: center;
-    padding-top: 24px;
+    padding-bottom: 18px;
   }
   nav > a {
-    flex-wrap: wrap;
     font-size: 14px;
     justify-content: start;
   }
-  h1{
+  h1 {
     font-size: 16px;
     padding-top: 10px;
     margin: 24px;
@@ -425,10 +433,9 @@ button > img {
     grid-column: 1;
   }
   .menu {
-    display: flex;
-    flex-direction: column;
+    display: none;
     justify-content: center;
-    margin-top: 14px;
+    padding-top: 14px;
     border-radius: 8px;
   }
   .treinamentos {

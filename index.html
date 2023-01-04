@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <script>document.documentElement.className += ' js'</script> -->
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
   <title>InovaçãoTech</title>
 </head>
 
 <main>
-<body class="light">
+<body class="light" onresize="changeWidth()">
     <header class='header' id="topo">
       <img src="./imagens/LOGOIVT.png" alt="Logo IVT">
-        <nav class="menu js-menu">
+      <span id="burguer" class="material-icons" onclick="showMenu()">menu</span>
+      <nav id="menu" class="menu js-menu">
           <a href="#topo">Home</a>
           <a href="#treinamentos">Treinamentos</a>
           <a href="#servicos">Serviços</a>
